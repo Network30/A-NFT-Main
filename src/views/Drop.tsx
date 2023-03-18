@@ -15,13 +15,14 @@ const Drop: React.FC = () => {
         Edition drops allow you to mint limited edition serialized NFT collections from your
         favourite content creators.
       </p>
-      <p style={{ marginBottom: 40 }}>
+      {/* Admin Pannel */}
+      {/* <p style={{ marginBottom: 40 }}>
         Note: Shop owners can create edition drops in the{' '}
         <a href="https://candy.liqnft.com/shop/drops" target="_blank" rel="noreferrer noopener">
           admin panel
         </a>
         .
-      </p>
+      </p> */}
       {candyShop && (
         <Drops
           candyShop={candyShop}

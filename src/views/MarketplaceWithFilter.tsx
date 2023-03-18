@@ -4,51 +4,34 @@ import { ConnectButton } from '@/components/ConnectButton';
 import { useUserWallet } from '@/hooks/useUserWallet';
 import { useShopStore } from '@/store/useShopStore';
 
-const MarketplaceWithFilter: React.FC = () => {
-  const userWallet = useUserWallet();
+const Marketplace: React.FC = () => {
   const candyShop = useShopStore((s) => s.candyShop);
+  const userWallet = useUserWallet();
+
   if (!candyShop) return null;
 
   return (
     <DesContainer>
       <Stat
         candyShop={candyShop}
-        title={'Marketplace'}
-        description={'Enable users to filter by collections and search for NFTs.'}
+        title={'A-NFT'}
+        description={
+          'Candy Shop is an open source library that allows you to create NFT storefronts and auctions in minutes!'
+        }
         style={{ paddingBottom: 50 }}
       />
+
       <Orders
         wallet={userWallet}
         candyShop={candyShop}
         walletConnectComponent={<ConnectButton />}
-        filters={FILTERS}
-        filterSearch
         search
       />
     </DesContainer>
   );
 };
 
-export default MarketplaceWithFilter;
-
-const FILTERS = [
-  { name: 'Puppies', collectionId: '1', identifier: 2036309415 },
-  { name: 'Shibas', collectionId: '2', identifier: 1235887132 },
-];
-
+export default Marketplace;
 const DesContainer = styled.div`
   width: 100%;
-
-  .candy-filter {
-    color: #fff;
-
-    li:hover {
-      color: #7522f5;
-    }
-
-    .candy-search input {
-      padding: 10px 4px 10px 24px;
-      width: 100%;
-    }
-  }
 `;
