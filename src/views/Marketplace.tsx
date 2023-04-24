@@ -32,8 +32,10 @@ const MarketplaceWithFilter: React.FC = () => {
 export default MarketplaceWithFilter;
 
 const FILTERS = [
-  { name: 'Tickets', collectionId: '1', identifier: 2036309415 },
-  { name: 'Artists', collectionId: '2', identifier: 1235887132 },
+  { name: 'Art', collectionId: '1', identifier: 2036309415 },
+  { name: 'Gaming', collectionId: '2', identifier: 1235887132 },
+  { name: 'Nature', collectionId: '3', identifier: 1235887132 },
+  { name: 'People', collectionId: '4', identifier: 1235887132 },
 ];
 
 const DesContainer = styled.div`
