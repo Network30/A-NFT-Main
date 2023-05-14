@@ -49,7 +49,6 @@ const TopNav: React.FC = () => {
         <Link to={RouteName.home}>
           <img alt="" src="/a-nft.png" />
         </Link>
-        <h1>NFT</h1>
       </Logo>
       <Menu>
         {getRoutes().map((item) => (

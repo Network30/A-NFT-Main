@@ -35,6 +35,7 @@ const FILTERS = [
   { name: 'Tickets', collectionId: '1', identifier: 1 },
   { name: 'Artists', collectionId: '2', identifier: 2 },
   { name: 'Gaming', collectionId: '3', identifier: 3 },
+  { name: 'Architects', collectionId: '4', identifier: 4 }
 ];
 
 const DesContainer = styled.div`
